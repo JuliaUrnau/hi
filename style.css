@@ -1,0 +1,154 @@
+*{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    grid-area: cab;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-shadow: 3px 3px 3px #ffff;
+    border-width: 2px 0 2px 0;
+    color:#d598a3;
+    font-size: 50px;
+    padding: 20px;
+    
+}
+   
+h1{
+    font-size: 40px; /* Esta linha define o tamanho da fonte para elementos com a classe .início como 40 pixeis. */
+    color: #020202;
+    text-align: center;  /* Esta linha centraliza o texto dentro dos elementos .início. Isso significa que o texto será alinhado horizontalmente no centro do elemento. */
+    font-family:Georgia, 'Times New Roman', Times, serif; /*Esta regra define a família de fontes para os elementos afetados. */
+    text-shadow: 2px 2px 2px rgb(18, 18, 18);
+    border-width: 2px 0 2px 0;
+}
+.container{
+    max-width: 1000px;
+    margin: 5px auto; /*  A margem cria espaço ao redor do elemento. */ 
+    background-color:#ffdbe6;
+    padding: 30px; /* O preenchimento interno cria espaço entre o conteúdo dentro desses elementos e suas bordas. */
+    text-align: justify;
+    border-radius: 40px;
+}
+h3{
+    font-size: 20px;   
+    color: #996b42; 
+}
+.group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    max-width: 190px;
+}
+.input {
+    width: 100%;
+    height: 40px;
+    line-height: 28px;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    background-color: #f3f3f4;
+    color: #0d0c22;
+    transition: .3s ease;
+}
+.input::placeholder {
+    color: #9e9ea7;
+}
+.input:focus, input:hover {
+    outline: none;
+    border-color: rgba(65, 61, 61, 0.4);
+    background-color: #fff;
+    box-shadow: 0 0 0 4px rgba(241, 241, 241, 0.1);
+}
+.icon {
+    position: absolute;
+    left: 1rem;
+    fill: #8a8a90;
+    width: 1rem;
+    height: 1rem;
+}
+.logo img {
+    width: 50px; /* Defina o tamanho adequado para o seu logotipo */
+    height: auto; /* Isso garante que a proporção seja mantida */
+}
+main{
+    grid-area: pri;
+    
+}
+    
+footer{
+    grid-area: rod;
+    background-color: pink;
+}
+body {
+    display: grid;
+    grid-template-areas: 
+    "cab cab"
+    "pri pri"
+    "rod rod";
+    grid-gap: 5px;
+    grid-template-rows: auto 1000px auto;
+    background-color: #D8D4C9;
+
+}
+.question {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.options label {
+    display: block;
+    margin-bottom: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.options label:hover {
+    background-color: #e0e0e0;
+}
+.result {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: pink;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: pink; 
+}
+@media only screen and (max-width: 480px) {
+    body{
+        grid-template-areas: 
+        "secn"
+        "prin"
+        "roda";
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 500px 100px;
+    }
+    section{
+        display: flex;
+    }
+    aside{
+        display: none;
+    }
+    header{
+        display: none;
+    }
+    
+}
